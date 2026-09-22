@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Nosotros — Visión Clara Óptica</title>
+  <meta name="description" content="Conoce nuestra historia, equipo y valores. Más de 15 años cuidando la salud visual de familias." />
+
+  <meta property="og:title" content="Sobre Nosotros — Visión Clara" />
+  <meta property="og:description" content="Nuestra historia, equipo y valores." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40' fill='none'%3E%3Ccircle cx='20' cy='20' r='18' stroke='%230ea5e9' stroke-width='2.5'/%3E%3Ccircle cx='20' cy='20' r='7' stroke='%230ea5e9' stroke-width='2.5'/%3E%3Ccircle cx='20' cy='20' r='2.5' fill='%230ea5e9'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"Playfair Display"', 'Georgia', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="bg-white">
+
+  <div id="nav-container"></div>
+
+  <main>
+    <!-- HEADER -->
+    <section class="hero-gradient pt-32 pb-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+        <span class="reveal inline-block px-4 py-1 bg-white/70 backdrop-blur text-sky-700 rounded-full text-sm font-medium mb-4">
+          Sobre nosotros
+        </span>
+        <h1 class="reveal font-display text-5xl md:text-6xl font-bold text-slate-900 mb-4">
+          Una historia de <span class="bg-gradient-to-r from-sky-500 to-cyan-500 bg-clip-text text-transparent">visión y cuidado</span>
+        </h1>
+        <p class="reveal text-lg text-slate-600 max-w-2xl mx-auto">
+          Más de 15 años dedicados a cuidar la salud visual de familias con profesionalismo, calidez y la última tecnología.
+        </p>
+      </div>
+    </section>
+
+    <!-- HISTORIA -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="reveal-left">
+            <span class="inline-block px-4 py-1 bg-sky-100 text-sky-700 rounded-full text-sm font-medium mb-4">
+              Nuestra historia
+            </span>
+            <h2 class="font-display text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+              Pasión por la salud visual desde 2008
+            </h2>
+            <div class="space-y-4 text-slate-600 leading-relaxed">
+              <p>
+                Visión Clara nació del sueño de crear un espacio donde la tecnología y la atención humana se unieran para ofrecer la mejor experiencia en salud visual. Lo que comenzó como una pequeña óptica familiar se ha convertido en un centro de referencia en la ciudad.
+              </p>
+              <p>
+                Hoy contamos con un equipo de profesionales altamente capacitados, tecnología de última generación y un compromiso inquebrantable con la excelencia y la calidez humana.
+              </p>
+              <p>
+                Cada paciente que cruza nuestra puerta es recibido como parte de la familia. Porque entendemos que detrás de cada par de gafas hay una historia, una profesión, un sueño que queremos ayudar a ver con mayor claridad.
+              </p>
+            </div>
+          </div>
+          <div class="reveal-right relative">
+            <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shadow-sky-500/20">
+              <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&q=80"
+                   alt="Interior de la óptica"
+                   class="w-full h-full object-cover">
+            </div>
+            <div class="absolute -bottom-6 -left-6 bg-sky-500 text-white rounded-2xl p-6 shadow-xl">
+              <div class="font-display text-4xl font-bold">15+</div>
+              <p class="text-sm">años de experiencia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <span class="reveal inline-block px-4 py-1 bg-sky-100 text-sky-700 rounded-full text-sm font-medium mb-4">
+            Nuestra trayectoria
+          </span>
+          <h2 class="reveal font-display text-4xl md:text-5xl font-bold text-slate-900">
+            Momentos clave
+          </h2>
+        </div>
+        <div id="history-timeline"></div>
+      </div>
+    </section>
+
+    <!-- MISIÓN VISIÓN VALORES -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <span class="reveal inline-block px-4 py-1 bg-sky-100 text-sky-700 rounded-full text-sm font-medium mb-4">
+            Lo que nos define
+          </span>
+          <h2 class="reveal font-display text-4xl md:text-5xl font-bold text-slate-900">
+            Misión, visión y valores
+          </h2>
+        </div>
+        <div id="values-grid" class="grid md:grid-cols-3 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- EQUIPO -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <span class="reveal inline-block px-4 py-1 bg-sky-100 text-sky-700 rounded-full text-sm font-medium mb-4">
+            Nuestro equipo
+          </span>
+          <h2 class="reveal font-display text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+            Profesionales a tu servicio
+          </h2>
+          <p class="reveal text-slate-600 max-w-2xl mx-auto">
+            Un equipo de ópticos-optometristas titulados, en constante formación, dedicados a cuidar tu visión.
+          </p>
+        </div>
+        <div id="team-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- MARCAS -->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <p class="reveal text-sm uppercase tracking-widest text-slate-500 font-semibold">
+            Trabajamos con las mejores marcas
+          </p>
+        </div>
+        <div id="brands-marquee"></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="reveal font-display text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+          ¿Te gustaría visitarnos?
+        </h2>
+        <p class="reveal text-slate-600 mb-8 max-w-xl mx-auto">
+          Estamos en pleno centro, con fácil acceso y estacionamiento. Ven a conocer nuestras instalaciones.
+        </p>
+        <a href="contacto.html" class="reveal btn-pulse inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-sky-500 to-cyan-500 text-white font-semibold rounded-full shadow-lg shadow-sky-500/30 hover:scale-105 transition-all">
+          Visítanos
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/animations.js"></script>
+</body>
+</html>
