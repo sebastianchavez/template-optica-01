@@ -160,16 +160,44 @@
     inject('#nav-container', renderNavbar());
     inject('#footer-container', renderFooter());
 
+    document.querySelectorAll('[data-contact]').forEach(el => {
+      const key = el.dataset.contact;
+      const value = window.MOCK.contact[key];
+      if (!value) return;
+      if (key === 'mapEmbed') {
+        el.src = value;
+        return;
+      }
+      if (el.dataset.contactLabel !== 'false') el.textContent = value;
+      if (key === 'phone') el.href = `tel:${value.replace(/\s/g, '')}`;
+      if (key === 'whatsapp') el.href = `https://wa.me/${value.replace(/\D/g, '')}`;
+      if (key === 'email') el.href = `mailto:${value}`;
+    });
+
     // Toggle menú móvil
     const toggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('mobile-menu');
     if (toggle && menu) {
+      function closeMenu() {
+        menu.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Abrir menú');
+        toggle.innerHTML = window.icon('menu');
+      }
       toggle.addEventListener('click', () => {
         const isOpen = !menu.classList.contains('hidden');
         menu.classList.toggle('hidden');
         toggle.setAttribute('aria-expanded', !isOpen);
+        toggle.setAttribute('aria-label', isOpen ? 'Abrir menú' : 'Cerrar menú');
         toggle.innerHTML = isOpen ? window.icon('menu') : window.icon('close');
       });
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+          closeMenu();
+          toggle.focus();
+        }
+      });
+      window.matchMedia('(min-width: 1024px)').addEventListener('change', closeMenu);
     }
 
     // Navbar shrink al hacer scroll

@@ -55,7 +55,7 @@
                 ${s.duration}
               </span>
               <span class="font-semibold text-sky-600">
-                ${s.priceFrom === 0 ? 'Gratis' : 'Desde $' + s.priceFrom}
+                ${s.priceFrom === 0 ? 'Gratis' : 'Desde ' + window.formatCLP(s.priceFrom)}
               </span>
             </div>
             <a href="contacto.html?servicio=${s.id}"
@@ -134,7 +134,7 @@
       <div class="reveal" data-delay="${i + 1}">
         <div class="card-hover relative rounded-3xl p-8 h-full flex flex-col
                     ${t.highlight
-                      ? 'bg-gradient-to-br from-sky-500 to-cyan-500 text-white shadow-2xl shadow-sky-500/40 scale-105 border-4 border-white'
+                      ? 'bg-gradient-to-br from-sky-500 to-cyan-500 text-white shadow-2xl shadow-sky-500/40 lg:scale-105 border-4 border-white'
                       : 'bg-white border border-slate-100 shadow-sm'}">
           ${t.badge ? `<span class="absolute -top-3 left-1/2 -translate-x-1/2 badge-pulse px-4 py-1 bg-amber-400 text-amber-900 text-xs font-bold rounded-full">${t.badge}</span>` : ''}
           <div class="text-center">
@@ -142,7 +142,7 @@
             <p class="mt-2 text-sm ${t.highlight ? 'text-sky-50' : 'text-slate-500'}">${t.description}</p>
             <div class="mt-6">
               <span class="text-sm ${t.highlight ? 'text-sky-100' : 'text-slate-500'}">${t.period}</span>
-              <div class="font-display text-5xl font-bold mt-1">$${t.price}</div>
+              <div class="font-display text-4xl sm:text-5xl font-bold mt-1 whitespace-nowrap">${window.formatCLP(t.price)}</div>
             </div>
           </div>
           <ul class="mt-8 space-y-3 flex-grow">
@@ -181,8 +181,8 @@
           <tbody>
             ${window.MOCK.pricing.extras.map((e, i) => `
               <tr class="${i % 2 ? 'bg-slate-50/50' : ''} hover:bg-sky-50/50 transition-colors">
-                <td class="px-6 py-4 text-slate-700">${e.service}</td>
-                <td class="px-6 py-4 text-right font-semibold text-sky-600">${e.price}</td>
+                <td class="px-4 sm:px-6 py-4 text-slate-700">${e.service}</td>
+                <td class="px-4 sm:px-6 py-4 text-right whitespace-nowrap font-semibold text-sky-600">${window.formatCLP(e.price)}</td>
               </tr>
             `).join('')}
           </tbody>

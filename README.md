@@ -185,12 +185,14 @@ Y reemplaza el CDN por `<link rel="stylesheet" href="assets/css/output.css">`.
 ## 📞 Datos de contacto mockeados
 
 - **Marca:** Visión Clara
-- **Dirección:** Av. Salud Visual 123, 28001 Madrid
-- **Teléfono:** +34 912 345 678
-- **WhatsApp:** +34 612 345 678
-- **Email:** hola@visionclara.es
+- **Dirección:** Av. Providencia 123, Providencia, Santiago, Chile
+- **Teléfono:** +56 2 2345 6789
+- **WhatsApp:** +56 9 1234 5678
+- **Email:** hola@visionclara.cl
 
-Todos los datos se reemplazan editando `data.js`.
+Los contactos son ejemplos de Chile y deben reemplazarse por los datos reales del negocio antes de publicar. Edita `data.js` para actualizar la página de contacto, el mapa, el pie de página y los enlaces de llamada.
+
+Los precios son referenciales en pesos chilenos (CLP), no una conversión de moneda. Se guardan como números enteros y se muestran con separador de miles chileno (por ejemplo, $89.900).
 
 ## 📸 Créditos de imágenes
 

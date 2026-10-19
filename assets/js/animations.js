@@ -76,9 +76,9 @@
       const progress = Math.min(elapsed / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
       const current = startVal + (target - startVal) * eased;
-      el.textContent = isFloat ? current.toFixed(1) : Math.floor(current).toLocaleString('es-ES');
+      el.textContent = isFloat ? current.toFixed(1) : Math.floor(current).toLocaleString('es-CL');
       if (progress < 1) requestAnimationFrame(update);
-      else el.textContent = isFloat ? target.toFixed(1) : target.toLocaleString('es-ES');
+      else el.textContent = isFloat ? target.toFixed(1) : target.toLocaleString('es-CL');
     }
     requestAnimationFrame(update);
   }

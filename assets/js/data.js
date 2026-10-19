@@ -66,7 +66,7 @@ window.MOCK = {
       title: 'Examen Visual Completo',
       description: 'Evaluación integral con refractometría, tonometría y fondo de ojo.',
       icon: 'eye',
-      priceFrom: 25,
+      priceFrom: 25000,
       duration: '30 min'
     },
     {
@@ -74,7 +74,7 @@ window.MOCK = {
       title: 'Adaptación de Lentes de Contacto',
       description: 'Asesoramiento personalizado y entrenamiento de uso correcto.',
       icon: 'contact',
-      priceFrom: 40,
+      priceFrom: 40000,
       duration: '45 min'
     },
     {
@@ -82,7 +82,7 @@ window.MOCK = {
       title: 'Terapia Visual',
       description: 'Ejercicios para mejorar la coordinación y enfoque ocular.',
       icon: 'activity',
-      priceFrom: 35,
+      priceFrom: 35000,
       duration: '50 min'
     },
     {
@@ -90,7 +90,7 @@ window.MOCK = {
       title: 'Examen Pediátrico',
       description: 'Evaluación especializada para niños desde 3 años con juegos interactivos.',
       icon: 'smile',
-      priceFrom: 30,
+      priceFrom: 30000,
       duration: '40 min'
     },
     {
@@ -98,7 +98,7 @@ window.MOCK = {
       title: 'Ayudas para Baja Visión',
       description: 'Soluciones ópticas especializadas para pacientes con visión reducida.',
       icon: 'zoom',
-      priceFrom: 60,
+      priceFrom: 60000,
       duration: '60 min'
     },
     {
@@ -106,7 +106,7 @@ window.MOCK = {
       title: 'Lentes Deportivos',
       description: 'Protección y corrección visual especializada para atletas.',
       icon: 'trophy',
-      priceFrom: 80,
+      priceFrom: 80000,
       duration: '40 min'
     },
     {
@@ -122,7 +122,7 @@ window.MOCK = {
       title: 'Taller y Ajustes',
       description: 'Reparación, ajuste y mantenimiento de tus gafas.',
       icon: 'tool',
-      priceFrom: 8,
+      priceFrom: 8000,
       duration: '15 min'
     }
   ],
@@ -131,7 +131,7 @@ window.MOCK = {
     tiers: [
       {
         name: 'Básico',
-        price: 89,
+        price: 89900,
         period: 'desde',
         description: 'Ideal para uso diario con corrección simple',
         features: [
@@ -146,7 +146,7 @@ window.MOCK = {
       },
       {
         name: 'Premium',
-        price: 199,
+        price: 199900,
         period: 'desde',
         description: 'La opción más elegida por nuestros pacientes',
         features: [
@@ -164,7 +164,7 @@ window.MOCK = {
       },
       {
         name: 'VIP',
-        price: 399,
+        price: 399900,
         period: 'desde',
         description: 'Alta gama con la mejor tecnología del mercado',
         features: [
@@ -182,12 +182,12 @@ window.MOCK = {
       }
     ],
     extras: [
-      { service: 'Examen visual completo', price: '$25' },
-      { service: 'Adaptación de lentes de contacto', price: '$40' },
-      { service: 'Terapia visual (sesión)', price: '$35' },
-      { service: 'Examen pediátrico', price: '$30' },
-      { service: 'Ayudas para baja visión', price: '$60' },
-      { service: 'Ajuste y mantenimiento', price: '$8' }
+      { service: 'Examen visual completo', price: 25000 },
+      { service: 'Adaptación de lentes de contacto', price: 40000 },
+      { service: 'Terapia visual (sesión)', price: 35000 },
+      { service: 'Examen pediátrico', price: 30000 },
+      { service: 'Ayudas para baja visión', price: 60000 },
+      { service: 'Ajuste y mantenimiento', price: 8000 }
     ]
   },
 
@@ -305,11 +305,11 @@ window.MOCK = {
   },
 
   contact: {
-    phone: '+34 912 345 678',
-    whatsapp: '+34 612 345 678',
-    email: 'hola@visionclara.es',
-    address: 'Av. Salud Visual 123, 28001 Madrid',
-    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.9549!2d-3.7037905!3d40.4167274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287d4c4b7c47%3A0x9c1e8d0f2b1e7e2f!2sMadrid!5e0!3m2!1ses!2ses!4v1700000000000',
+    phone: '+56 2 2345 6789',
+    whatsapp: '+56 9 1234 5678',
+    email: 'hola@visionclara.cl',
+    address: 'Av. Providencia 123, Providencia, Santiago, Chile',
+    mapEmbed: 'https://www.google.com/maps?q=Av.%20Providencia%20123%2C%20Providencia%2C%20Santiago%2C%20Chile&output=embed',
     social: {
       facebook: '#',
       instagram: '#',
@@ -368,8 +368,8 @@ window.MOCK = {
       answer: 'Sí, trabajamos con financiación hasta en 12 cuotas sin interés con tarjetas seleccionadas.'
     },
     {
-      question: '¿Atienden obras sociales?',
-      answer: 'Trabajamos con las principales obras sociales y prepagas. Consulta por tu cobertura específica.'
+      question: '¿Puedo solicitar reembolso en mi Isapre o seguro?',
+      answer: 'Consulta con tu Isapre o seguro complementario los requisitos y la cobertura de tu plan antes de agendar.'
     }
   ]
 };
@@ -406,3 +406,8 @@ window.ICONS = {
 };
 
 window.icon = function (name) { return window.ICONS[name] || ''; };
+
+// Los importes se guardan como pesos chilenos enteros.
+window.formatCLP = new Intl.NumberFormat('es-CL', {
+  style: 'currency', currency: 'CLP', maximumFractionDigits: 0
+}).format;
